@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-container">
@@ -46,18 +47,19 @@
                 <div class="slides">
                     <div class="slide"><img src="./Assets/1.png" alt="Image 1"></div>
                     <div class="slide"><img src="./Assets/2.png" alt="Image 2"></div>
-                    <div class="slide"><img src="./Assets/3.png" alt="Image 3"></div>
-                    <div class="slide"><img src="./Assets/1.png" alt="Image 4"></div>
+                    <div class="slide"><img src="./Assets/1.png" alt="Image 3"></div>
+                    <div class="slide"><img src="./Assets/3.png" alt="Image 4"></div>
                     <div class="slide"><img src="./Assets/2.png" alt="Image 5"></div>
                     <div class="slide"><img src="./Assets/3.png" alt="Image 6"></div>
                     <div class="slide"><img src="./Assets/1.png" alt="Image 7"></div>
                     <div class="slide"><img src="./Assets/2.png" alt="Image 8"></div>
                     <div class="slide"><img src="./Assets/3.png" alt="Image 9"></div>
+                    <!-- <div class="slide"><img src="./Assets/3.png" alt="Image 9"></div> -->
                 </div>
                 <div class="dots">
-                    <span class="dot" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot black" onclick="currentSlide(0)"></span>
+                    <span class="dot black" onclick="currentSlide(1)"></span>
+                    <span class="dot black" onclick="currentSlide(2)"></span>
                 </div>
             </div>
         </div>
@@ -71,22 +73,22 @@
                     <h1>WHY WE ARE BEST</h1>
                 </div>
                 <div class="info">
-                    <div>
+                    <div class="info-about">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/1.svg" />
                         <h3>Clarified Vision & Target</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, id alias!</p>
                     </div>
-                    <div>
+                    <div class="info-about">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/2.svg" />
                         <h3>High Performance</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, id alias!</p>
                     </div>
-                    <div>
+                    <div class="info-about">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/3.svg" />
                         <h3>Maintain Security</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, id alias!</p>
                     </div>
-                    <div>
+                    <div class="info-about">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/4.svg" />
                         <h3>Better Strategy & Quality</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, id alias!</p>
@@ -97,22 +99,22 @@
                         <span>OUR PROJECT</span>
                         <h1>WHY WE ARE BEST</h1>
                     </div>
-                    <div class="row">
-                        <div class="project-1">
+                    <div class="project-list">
+                        <div class="project-img">
                             <div class="photos">
-                                <img src="./Assets/image.png"/>
+                                <img id="imageProject" src="./Assets/image.png"/>
                             </div>
                         </div>
-                        <div class="project-2">
-                            <div>
+                        <div class="project-info">
+                            <div class="project-1 inform" onclick="changeImage('./Assets/image.png', this)">
                                 <h3>Genderless Kei - Japan's Hot</h3>
                                 <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
                             </div>
-                            <div>
+                            <div class="project-1 inform" onclick="changeImage('./Assets/japan1.jpg', this)">
                                 <h3>Better Startegy & Quality</h3>
                                 <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
                             </div>
-                            <div>
+                            <div class="project-1 inform" onclick="changeImage('./Assets/japan3.jpg', this)">
                                 <h3>Genderless Kei - Japan's Hot</h3>
                                 <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
                             </div>
@@ -130,23 +132,23 @@
                     <span>EXPERTS GROWTH</span>
                     <h1>OUR COMPANY GROWTH</h1>
                 </div>
-                <div>
-                    <div>
+                <div class="Performance">
+                    <div class="perform">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/heart%20(2).svg"/>
                         <h1>199+</h1>
                         <p>Satisfied Customers</p>
                     </div>
-                    <div>
+                    <div class="perform">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/clock%20(3).svg"/>
                         <h1>1591+</h1>
                         <p>Days Of Operation</p>
                     </div>
-                    <div>
+                    <div class="perform">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/Path%204402.svg"/>
                         <h1>283+</h1>
                         <p>Complete Project</p>
                     </div>
-                    <div>
+                    <div class="perform">
                         <img src="https://digitalsparkagency.netlify.app/Assets/icons/Path%204406.svg"/>
                         <h1>75+</h1>
                         <p>Win Awards</p>
@@ -163,23 +165,25 @@
                     <span>CLIENT'S FEEDBACK</span>
                     <h1>PEOPLE SAY'S ABOUT US !</h1>
                 </div>
-                <div>
-                    <h3>Jannat Tumpa The standard chunk of Lorem Ipsum used 
-                        since the 1500s is reproduced below for those interested. 
-                        Sections Bonorum at Malorum Original.
-                    </h3>
-                    <span>JANNAT TUMPA </span>
-                    <span>- COO, AMERIMAR ENTERPRISES, INC.</span>
+                <div class="feedback">
+                    <div class="feed">
+                        <h3>Jannat Tumpa The standard chunk of Lorem Ipsum used 
+                            since the 1500s is reproduced below for those interested. 
+                            Sections Bonorum at Malorum Original.
+                        </h3>
+                        <span>JANNAT TUMPA </span>
+                        <span>- COO, AMERIMAR ENTERPRISES, INC.</span>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--------------footer---------------->
 
-        <div>
-            <img src="./Assets/Group 500.png" style="background-color: #ff3147;"/>
+        <div class="footer">
+            <img src="./Assets/Group 500.png"/>
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
