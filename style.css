@@ -53,10 +53,97 @@
     border: none;
 }
 
+.contact-btn:hover{
+    background-color: #f13333;
+}
+
 .main-img img{
     width: 410px;
     height: 620px;
     border-radius: 5px;
+}
+
+.contact-page{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-form {
+    background-color: #fefefe;
+    margin: 11% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: black
+}
+
+.contact-form label {
+    display: block;
+    text-align: left;
+    color: #333;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.submit-btn{
+    height: 45px;
+    width: 300px;
+    font-size: 15px;
+    color: white;
+    background-color: #ff3147;
+    padding: 14px 28px;
+    margin: 0px 80px 0px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+}
+.submit-btn:hover{
+    background-color:#f13333;
 }
 
 .services-container{
@@ -104,7 +191,6 @@
     width: 100%;
     height: 572px;
     margin: 30px 30px;
-    position: relative;
     overflow: hidden;
 }
 
@@ -117,11 +203,67 @@
 .slide{
     min-width: calc(100% / 4);
     box-sizing: border-box;
+    position: relative;
 }
 .slide img{
     width: 270px;
     height: 400px;
     display: block;
+}
+
+.layer {
+    width: 270px;
+    height: 0;
+    color: #ffffff;
+    background: #ff3147;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 25px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer img{
+    height: 50px;
+    width: 50px;
+    margin: 20px
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 21px;
+    font-size: 24px;
+}
+
+.layer p{
+    margin-bottom: 50px;
+}
+
+.layer a {
+    padding-top: 10px;
+    height: 40px;
+    width: 170px;
+    color: #ff3147;
+    background: #F4F4F4;
+    font-weight: 700;
+    border: 1px solid #F4F4F4;
+    text-decoration: none;
+}
+
+.arrow{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.slide:hover .layer {
+    height: 100%;
 }
 
 .dots {
@@ -136,13 +278,13 @@
     border-radius: 50%; 
     cursor: pointer;
 }
+
 .black{
     width: 8px;
     height: 8px;
     background-color: black; 
     border-radius: 50%;
 }
-
 
 .dot.active{
     width: 32px;

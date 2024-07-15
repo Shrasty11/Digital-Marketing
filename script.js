@@ -37,4 +37,49 @@ function changeImage(imageSrc, element) {
 
     element.classList.add('active');
 
-}    
+}  
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const contactBtn = document.getElementById('contactBtn');
+    const contactPage = document.getElementById('contactPage');
+    const closeBtn = document.getElementsByClassName('close-btn')[0];
+
+    contactBtn.addEventListener('click', () => {
+        contactPage.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        contactPage.style.display = 'none';
+    });
+
+
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('Form submitted successfully!');
+                contactPage.style.display = 'none';
+                contactForm.reset();
+            } else {
+                alert('There was a problem submitting the form.');
+            }
+        } catch (error) {
+            alert('There was an error submitting the form. Please try again.');
+        }
+    });
+});
+
