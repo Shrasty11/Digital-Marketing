@@ -290,7 +290,7 @@
     width: 32px;
     height: 32px;
     background-color: red;
-    background: url(https://digitalsparkagency.netlify.app/Assets/icons/red-dot.svg);
+    background: url(./Assets/dot.png);
     background-size: contain;
 }
 
@@ -457,7 +457,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://digitalsparkagency.netlify.app/Assets/icons/Quotemarks-left.svg);
+    background-image: url(./Assets/Quotemarks-left.png);
     background-repeat: no-repeat;
     background-size: 6%;
     background-position-x: 150px;
